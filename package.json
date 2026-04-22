@@ -1,5 +1,5 @@
 {
-  "name": "westman",
+  "name": "astro-tailwindcss-static-no-server-build",
   "type": "module",
   "version": "0.0.1",
   "engines": {

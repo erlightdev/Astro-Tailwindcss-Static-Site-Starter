@@ -1,10 +1,6 @@
-# Astro Starter Kit: Minimal
+# Astro + Tailwindcss + Static (No Server Build)
 
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This project is a static site starter using Astro and Tailwind CSS, with no server build. It is optimized for static hosting and fast deployment.
 
 ## 🚀 Project Structure
 
