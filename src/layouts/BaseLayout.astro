@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+const { title = "Westman" } = Astro.props;
+---
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css" />
+    <slot name="head" />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+  </body>
+</html>

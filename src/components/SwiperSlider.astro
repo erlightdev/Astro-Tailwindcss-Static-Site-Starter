@@ -1,0 +1,40 @@
+---
+const slides = [
+  { bg: "bg-blue-600",   label: "Slide 01", heading: "Modern Design",      sub: "Clean, minimal and ready for your content." },
+  { bg: "bg-indigo-600", label: "Slide 02", heading: "Smooth Animations",  sub: "Powered by Swiper.js with zero config." },
+  { bg: "bg-violet-600", label: "Slide 03", heading: "Fully Responsive",   sub: "Looks perfect on every screen size." },
+  { bg: "bg-pink-600",   label: "Slide 04", heading: "Easy to Customise",  sub: "Swap colours, content and images in seconds." },
+  { bg: "bg-rose-600",   label: "Slide 05", heading: "Client Ready",       sub: "Build once, share the dist folder." },
+];
+---
+
+<div class="swiper w-full overflow-hidden rounded-2xl shadow-xl">
+  <div class="swiper-wrapper">
+    {slides.map((slide) => (
+      <div class={`swiper-slide flex flex-col items-center justify-center h-96 text-white px-8 text-center ${slide.bg}`}>
+        <span class="text-sm font-semibold uppercase tracking-widest opacity-70 mb-3">{slide.label}</span>
+        <h2 class="text-4xl font-bold mb-3">{slide.heading}</h2>
+        <p class="text-lg opacity-80 max-w-md">{slide.sub}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<script is:inline src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+  (() => {
+    const sliderRoot = document.querySelector(".swiper");
+    if (!sliderRoot || typeof window.Swiper === "undefined") return;
+
+    new window.Swiper(sliderRoot, {
+      loop: true,
+      autoplay: { delay: 3500, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+  })();
+</script>
